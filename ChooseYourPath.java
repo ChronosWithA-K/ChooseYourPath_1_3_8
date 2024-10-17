@@ -7,13 +7,13 @@ public class ChooseYourPath {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            System.out.println("You are on a path in the woods. And at the end of that path is a cabin. And in the basement of that cabin is a prince(ss). You're here to slay him(her). If you don't, it will be the end of the world.");
+            System.out.println("You wake up in a 10x10x10 feet cubed room. It is dimly lit, and ");
         }
     }
 
     public static boolean inputLegalityChecker(String userInput) {
         for (int i = 0; i < userInput.length(); i++) {
-            if ((Character.isDigit(userInput.charAt(i)) == false)) {
+            if ((Character.isLetter(userInput.charAt(i)) == false)) {
                 return false;
             }
         }
