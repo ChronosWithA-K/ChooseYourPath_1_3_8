@@ -1,17 +1,42 @@
-
 import java.util.Scanner;
 
 public class ChooseYourPath {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        String choice = "";
+        boolean symbol1 = false;
+        boolean symbol2 = false;
+        boolean symbol3 = false;
+
+        System.out.println("All inputs have to be an integer, with no other characters.");
 
         while (true) {
-            System.out.println("You wake up in a 10x10x10 feet cubed room. It is dimly lit, and ");
+            while (true) {
+                System.out.println("You wake up in a roughly 10x10x10 feet cubed room. It is dimly lit. You see a misshapen lump in the corner. What do you want to do:");
+                System.out.println("(1) Look around more");
+                System.out.println("(2) Investigate the lump");
+
+                choice = sc.nextLine();
+                if (inputLegalityChecker(choice) && (choice.equals("1") || choice.equals("2"))) {
+                    break;
+                }
+            }
+
+            if (choice.equals("1")) {
+                System.out.println("There is a cabinet in the corner of the room. There is always a bed in the corner.");
+
+            } else {
+                System.out.println("You investigate the lump, which turns out to be a body. You find a piece of a symbol.");
+                symbol1 = true;
+            }
         }
     }
 
     public static boolean inputLegalityChecker(String userInput) {
+        if (userInput.length() > 1) {
+            return false;
+        }
+
         for (int i = 0; i < userInput.length(); i++) {
             if ((Character.isLetter(userInput.charAt(i)) == false)) {
                 return false;
