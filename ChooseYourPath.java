@@ -33,15 +33,6 @@ public class ChooseYourPath {
     }
 
     public static boolean inputLegalityChecker(String userInput) {
-        if (userInput.length() > 1) {
-            return false;
-        }
-
-        for (int i = 0; i < userInput.length(); i++) {
-            if ((Character.isLetter(userInput.charAt(i)) == false)) {
-                return false;
-            }
-        }
-        return true;
+        return userInput.length() == 1 && Character.isDigit(userInput.charAt(0));
     }
 }
