@@ -5,6 +5,8 @@ public class ChooseYourPath {
         Scanner sc = new Scanner(System.in);
         String choice;
         boolean symbol1 = false;
+        boolean symbol2 = false;
+        boolean symbol3 = false;
 
         System.out.println("All inputs have to be an integer, with no other characters.");
 
