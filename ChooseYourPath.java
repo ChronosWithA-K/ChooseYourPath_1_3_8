@@ -4,7 +4,7 @@ public class ChooseYourPath {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String choice;
-        boolean symbol1 = false;
+        boolean symbol1 = false; // Why is this not used? It clearly is - 24:36
         boolean symbol2 = false;
         boolean symbol3 = false;
 
