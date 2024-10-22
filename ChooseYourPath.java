@@ -8,7 +8,7 @@ public class ChooseYourPath {
         boolean symbol2 = false;
         boolean symbol3 = false;
 
-        System.out.println("All inputs have to be an integer, with no other characters.");
+        System.out.println("All inputs have to be an integer, with no other characters. They have to be one of the given options.");
 
         while (true) {
             System.out.println("You wake up in a roughly 10x10x10 feet cubed room. It is dimly lit. You see a misshapen lump in the corner. What do you want to do:");
