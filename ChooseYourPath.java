@@ -20,7 +20,7 @@ public class ChooseYourPath {
                 if (choice.equals("1")) {
                     System.out.println("There is a cabinet in the corner of the room. There is also a bed in the corner.");
                 } else {
-                    System.out.println("You investigate the lump, which turns out to be a body. You find a piece of a symbol.");
+                    System.out.println("You investigate the lump, which turns out to be a body. You find what appears to be a symbol fragment.");
                     symbol1 = true;
                 }
             } else {
