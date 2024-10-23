@@ -14,7 +14,7 @@ public class ChooseYourPath {
             lookAround();
 
             if (bodySymbol && bedSymbol && cabinetSymbol) {
-                System.out.println("You go to the door with trembling fingers. Slowly, you put the pieces of the symbol into the door, and you push it open.");
+                System.out.println("\nYou go to the door with trembling fingers. Slowly, you put the pieces of the symbol into the door, and you push it open.");
                 System.out.println("A heavenly orator ascends from the ground and belts out:\n");
                 System.out.println("Old Godzilla was hopping around\r\n" + //
                                         "Tokyo City like a big playground\r\n" + //
