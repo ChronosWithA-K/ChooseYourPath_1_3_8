@@ -7,7 +7,7 @@ public class ChooseYourPath {
     static boolean bedSymbol = false;
     static boolean cabinetSymbol = false;
     public static void main(String[] args) {
-        // clearTerminal();
+        clearTerminal();
         System.out.println("All inputs have to be an integer, with no other characters. They have to be one of the given options.\n");
         System.out.println("You wake up in a roughly 10x10x10 feet cubed room. It is dimly lit.");
          while (true) {
