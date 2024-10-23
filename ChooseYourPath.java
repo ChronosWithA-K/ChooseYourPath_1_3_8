@@ -91,7 +91,7 @@ public class ChooseYourPath {
                                         "Of ultimate destiny\n");
                 System.out.println("Also, you should download TempleOS.\n");
                 System.out.println("With that, the messengr takes the completed symbol from the door, tosses it away, shoves you back inside the room, and slams the door shut.");
-
+                System.out.println("Understandably, you are befuddled, addled, bewildered, muddled, disoriented, baffled, perplexed, confuesd, dazed, mystified, confounded, and one might even say: utterly clueless about what was just happened, so much so that you don't even get upset at once more being trapped - instead, you just sit on the floor, re-thinking your entire futile existence flippled every which way by this turn of events.");
                 break;
             }
         }
