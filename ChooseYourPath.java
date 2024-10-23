@@ -73,7 +73,7 @@ public class ChooseYourPath {
                                         "Bill S. Preston and Theodore Logan\r\n" + //
                                         "Spock, The Rock, Doc Ock, and Hulk Hogan\r\n" + //
                                         "All came out of nowhere lightning fast\r\n" + //
-                                        "And they kicked Chuck Norris in his cowboy ass\r\n" + //
+                                        "And they kicked Chuck Norris in his cowboy [behind]\r\n" + //
                                         "It was the bloodiest battle that the world ever saw\r\n" + //
                                         "With civilians looking on in total awe\r\n" + //
                                         "The fight raged on for a century\r\n" + //
