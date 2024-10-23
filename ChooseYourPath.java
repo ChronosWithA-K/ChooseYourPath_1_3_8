@@ -13,7 +13,7 @@ public class ChooseYourPath {
          while (true) {
             lookAround();
 
-            if (bodySymbol && bedSymbol && cabinetSymbol) {
+            if (investigateDoor()) {
                 System.out.println("\nYou go to the door with trembling fingers. Slowly, you put the pieces of the symbol into the door, and you push it open.");
                 System.out.println("A heavenly orator ascends from the ground and belts out:\n");
                 System.out.println("Old Godzilla was hopping around\r\n" + //
@@ -91,7 +91,7 @@ public class ChooseYourPath {
                                         "Of ultimate destiny\n");
                 System.out.println("Also, you should download TempleOS.\n");
                 System.out.println("With that, the messengr takes the completed symbol from the door, tosses it away, shoves you back inside the room, and slams the door shut.");
-                System.out.println("Understandably, you are befuddled, addled, bewildered, muddled, disoriented, baffled, perplexed, confuesd, dazed, mystified, confounded, and one might even say: utterly clueless about what was just happened, so much so that you don't even get upset at once more being trapped - instead, you just sit on the floor, re-thinking your entire futile existence flippled every which way by this turn of events.");
+                System.out.println("Understandably, you are befuddled, addled, bewildered, muddled, disoriented, baffled, perplexed, confuesd, dazed, mystified, confounded, and one might even say, if they were feeling especially bold and innovative, desperate to invent new ways of wordsmithing, which, upon further reflection, is not actually all that new: utterly clueless about what was just happened, so much so that you don't even get upset at once more being trapped - instead, you just sit on the floor, re-thinking your entire futile existence flippled every which way by this turn of events.");
                 break;
             }
         }
@@ -159,7 +159,14 @@ public class ChooseYourPath {
         }
     }
 
-    public static void investigateDoor() {
-        System.out.println("You investigate the door. It appears to have some kind of odd symbol on it. You can't do anything more with it for now.");
+    public static boolean investigateDoor() {
+        if (!bodySymbol || !bedSymbol || !cabinetSymbol) {
+            System.out.println("You investigate the door. It appears to have some kind of odd symbol on it. You can't do anything more with it for now.");
+        } else {
+            if (bodySymbol && bedSymbol && cabinetSymbol) {
+                return true;
+            }
+        }
+        return false;
     }
 }
