@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class ChooseYourPath {
     static Scanner sc = new Scanner(System.in);
@@ -6,93 +7,15 @@ public class ChooseYourPath {
     static boolean bodySymbol = false;
     static boolean bedSymbol = false;
     static boolean cabinetSymbol = false;
-    static boolean canEscape = false;
-    public static void main(String[] args) {
+    static boolean escaped = false;
+    public static void main(String[] args) throws InterruptedException {
         clearTerminal();
         System.out.println("All inputs have to be an integer, with no other characters. They have to be one of the given options.\n");
-        System.out.println("You wake up in a roughly 10x10x10 feet cubed room. It is dimly lit.");
+        System.out.println("You wake up in a roughly 10x10x10 feet cubed room. It is dimly lit. You look around.");
          while (true) {
             lookAround();
 
-            if (canEscape) {
-                System.out.println("\nYou go to the door with trembling fingers. Slowly, you put the pieces of the symbol into the door, and you push it open.");
-                System.out.println("A heavenly orator ascends from the ground and belts out:\n");
-                System.out.println("Old Godzilla was hopping around\r\n" + //
-                                        "Tokyo City like a big playground\r\n" + //
-                                        "When suddenly Batman burst from the shade\r\n" + //
-                                        "And hit Godzilla with a Batgrenade\r\n" + //
-                                        "Godzilla got [angered] and began to attack\r\n" + //
-                                        "But didn't expect to be blocked by Shaq\r\n" + //
-                                        "Who proceeded to open up a can of Shaq-Fu\r\n" + //
-                                        "When Aaron Carter came out of the blue\r\n" + //
-                                        "And he started beating up Shaquille O'Neal\r\n" + //
-                                        "Then they both got flattened by the Batmobile\r\n" + //
-                                        "But before it could make it back to the Batcave\r\n" + //
-                                        "Abraham Lincoln popped out of his grave\r\n" + //
-                                        "And took an AK-47 out from under his hat\r\n" + //
-                                        "And blew Batman away with a rat-a-tat-tat\r\n" + //
-                                        "But he ran out of bullets and he ran away\r\n" + //
-                                        "Because Optimus Prime came to save the day\r\n" + //
-                                        "This is the ultimate showdown of ultimate destiny\r\n" + //
-                                        "Good guys, bad guys, and explosions as far as the eye can see\r\n" + //
-                                        "And only one will survive, I wonder who it will be\r\n" + //
-                                        "This is the ultimate showdown of ultimate destiny\r\n" + //
-                                        "Godzilla took a bite out of Optimus Prime\r\n" + //
-                                        "Like Scruff McGruff took a bite out of crime\r\n" + //
-                                        "And then Shaq came back covered in a tire track\r\n" + //
-                                        "But Jackie Chan jumped out and landed on his back\r\n" + //
-                                        "And Batman was injured, and trying to get steady\r\n" + //
-                                        "When Abraham Lincoln came back with a machete\r\n" + //
-                                        "But suddenly something caught his leg and he tripped\r\n" + //
-                                        "Indiana Jones took him out with his whip\r\n" + //
-                                        "Then he saw Godzilla sneaking up from behind\r\n" + //
-                                        "And he reached for his gun which he just couldn't find\r\n" + //
-                                        "'Cause Batman stole it and he shot and he missed\r\n" + //
-                                        "And Jackie Chan deflected it with his fist\r\n" + //
-                                        "Then he jumped in the air and did a somersault\r\n" + //
-                                        "While Abraham Lincoln tried to pole vault\r\n" + //
-                                        "Onto Optimus Prime, but they collided in the air\r\n" + //
-                                        "Then they both got hit by a Care Bear stare\r\n" + //
-                                        "This is the ultimate showdown of ultimate destiny\r\n" + //
-                                        "Good guys, bad guys, and explosions as far as the eye can see\r\n" + //
-                                        "And only one will survive, I wonder who it will be\r\n" + //
-                                        "This is the ultimate showdown\r\n" + //
-                                        "Angels sang out an immaculate chorus\r\n" + //
-                                        "Down from the heavens descended Chuck Norris\r\n" + //
-                                        "Who delivered a kick which could shatter bones\r\n" + //
-                                        "Into the crotch of Indiana Jones\r\n" + //
-                                        "Who fell over on the ground, writhing in pain\r\n" + //
-                                        "As Batman changed back into Bruce Wayne\r\n" + //
-                                        "But Chuck saw through his clever disguise\r\n" + //
-                                        "And he crushed Batman's head in between his thighs\r\n" + //
-                                        "Then Gandalf the Grey and Gandalf the White\r\n" + //
-                                        "And Monty Python and the Holy Grail's black knight\r\n" + //
-                                        "And Benito Mussolini and the Blue Meanie\r\n" + //
-                                        "And Cowboy Curtis and Jambi the Genie\r\n" + //
-                                        "Robocop, The Terminator, Captain Kirk, and Darth Vader\r\n" + //
-                                        "Lo-pan, Superman, every single Power Ranger\r\n" + //
-                                        "Bill S. Preston and Theodore Logan\r\n" + //
-                                        "Spock, The Rock, Doc Ock, and Hulk Hogan\r\n" + //
-                                        "All came out of nowhere lightning fast\r\n" + //
-                                        "And they kicked Chuck Norris in his cowboy [behind]\r\n" + //
-                                        "It was the bloodiest battle that the world ever saw\r\n" + //
-                                        "With civilians looking on in total awe\r\n" + //
-                                        "The fight raged on for a century\r\n" + //
-                                        "Many lives were claimed, but eventually\r\n" + //
-                                        "The champion stood, the rest saw their better\r\n" + //
-                                        "Mr. Rogers in a bloodstained sweater\r\n" + //
-                                        "This is the ultimate showdown of ultimate destiny\r\n" + //
-                                        "Good guys, bad guys, and explosions as far as the eye can see\r\n" + //
-                                        "And only one will survive, I wonder who it will be\r\n" + //
-                                        "This is the ultimate showdown\r\n" + //
-                                        "(The ultimate showdown)\r\n" + //
-                                        "This is the ultimate showdown\r\n" + //
-                                        "(The ultimate showdown)\r\n" + //
-                                        "This is the ultimate showdown\r\n" + //
-                                        "Of ultimate destiny\n");
-                System.out.println("Also, you should download TempleOS.\n");
-                System.out.println("With that, the messengr takes the completed symbol from the door, tosses it away, shoves you back inside the room, and slams the door shut.");
-                System.out.println("Understandably, you are befuddled, addled, bewildered, muddled, disoriented, baffled, perplexed, confuesd, dazed, mystified, confounded, and one might even say, if they were feeling especially bold and innovative, desperate to invent new ways of wordsmithing, which, upon further reflection, is not actually all that new: utterly clueless about what was just happened, so much so that you don't even get upset at once more being trapped - instead, you just sit on the floor, re-thinking your entire futile existence flippled every which way by this turn of events.");
+            if (escaped) {
                 break;
             }
         }
@@ -109,7 +32,8 @@ public class ChooseYourPath {
     }   
 
     // User action methods below
-    public static boolean lookAround() {
+    public static void lookAround() throws InterruptedException {
+        clearTerminal();
         System.out.println("There is a cabinet in the corner of the room. There is also a bed in the corner. There is a misshapen lump in the corner. A door is set in the wall.");
         System.out.println("(1) Investigate cabinet");
         System.out.println("(2) Investigate bed");
@@ -125,89 +49,11 @@ public class ChooseYourPath {
                 investigateBed();
             } else if (choice.equals("3")) {
                 investigateLump();
-            } else {
-                if (investigateDoor()) {
-                    System.out.println("\nYou go to the door with trembling fingers. Slowly, you put the pieces of the symbol into the door, and you push it open.");
-                System.out.println("A heavenly orator ascends from the ground and belts out:\n");
-                System.out.println("Old Godzilla was hopping around\r\n" + //
-                                        "Tokyo City like a big playground\r\n" + //
-                                        "When suddenly Batman burst from the shade\r\n" + //
-                                        "And hit Godzilla with a Batgrenade\r\n" + //
-                                        "Godzilla got [angered] and began to attack\r\n" + //
-                                        "But didn't expect to be blocked by Shaq\r\n" + //
-                                        "Who proceeded to open up a can of Shaq-Fu\r\n" + //
-                                        "When Aaron Carter came out of the blue\r\n" + //
-                                        "And he started beating up Shaquille O'Neal\r\n" + //
-                                        "Then they both got flattened by the Batmobile\r\n" + //
-                                        "But before it could make it back to the Batcave\r\n" + //
-                                        "Abraham Lincoln popped out of his grave\r\n" + //
-                                        "And took an AK-47 out from under his hat\r\n" + //
-                                        "And blew Batman away with a rat-a-tat-tat\r\n" + //
-                                        "But he ran out of bullets and he ran away\r\n" + //
-                                        "Because Optimus Prime came to save the day\r\n" + //
-                                        "This is the ultimate showdown of ultimate destiny\r\n" + //
-                                        "Good guys, bad guys, and explosions as far as the eye can see\r\n" + //
-                                        "And only one will survive, I wonder who it will be\r\n" + //
-                                        "This is the ultimate showdown of ultimate destiny\r\n" + //
-                                        "Godzilla took a bite out of Optimus Prime\r\n" + //
-                                        "Like Scruff McGruff took a bite out of crime\r\n" + //
-                                        "And then Shaq came back covered in a tire track\r\n" + //
-                                        "But Jackie Chan jumped out and landed on his back\r\n" + //
-                                        "And Batman was injured, and trying to get steady\r\n" + //
-                                        "When Abraham Lincoln came back with a machete\r\n" + //
-                                        "But suddenly something caught his leg and he tripped\r\n" + //
-                                        "Indiana Jones took him out with his whip\r\n" + //
-                                        "Then he saw Godzilla sneaking up from behind\r\n" + //
-                                        "And he reached for his gun which he just couldn't find\r\n" + //
-                                        "'Cause Batman stole it and he shot and he missed\r\n" + //
-                                        "And Jackie Chan deflected it with his fist\r\n" + //
-                                        "Then he jumped in the air and did a somersault\r\n" + //
-                                        "While Abraham Lincoln tried to pole vault\r\n" + //
-                                        "Onto Optimus Prime, but they collided in the air\r\n" + //
-                                        "Then they both got hit by a Care Bear stare\r\n" + //
-                                        "This is the ultimate showdown of ultimate destiny\r\n" + //
-                                        "Good guys, bad guys, and explosions as far as the eye can see\r\n" + //
-                                        "And only one will survive, I wonder who it will be\r\n" + //
-                                        "This is the ultimate showdown\r\n" + //
-                                        "Angels sang out an immaculate chorus\r\n" + //
-                                        "Down from the heavens descended Chuck Norris\r\n" + //
-                                        "Who delivered a kick which could shatter bones\r\n" + //
-                                        "Into the crotch of Indiana Jones\r\n" + //
-                                        "Who fell over on the ground, writhing in pain\r\n" + //
-                                        "As Batman changed back into Bruce Wayne\r\n" + //
-                                        "But Chuck saw through his clever disguise\r\n" + //
-                                        "And he crushed Batman's head in between his thighs\r\n" + //
-                                        "Then Gandalf the Grey and Gandalf the White\r\n" + //
-                                        "And Monty Python and the Holy Grail's black knight\r\n" + //
-                                        "And Benito Mussolini and the Blue Meanie\r\n" + //
-                                        "And Cowboy Curtis and Jambi the Genie\r\n" + //
-                                        "Robocop, The Terminator, Captain Kirk, and Darth Vader\r\n" + //
-                                        "Lo-pan, Superman, every single Power Ranger\r\n" + //
-                                        "Bill S. Preston and Theodore Logan\r\n" + //
-                                        "Spock, The Rock, Doc Ock, and Hulk Hogan\r\n" + //
-                                        "All came out of nowhere lightning fast\r\n" + //
-                                        "And they kicked Chuck Norris in his cowboy [behind]\r\n" + //
-                                        "It was the bloodiest battle that the world ever saw\r\n" + //
-                                        "With civilians looking on in total awe\r\n" + //
-                                        "The fight raged on for a century\r\n" + //
-                                        "Many lives were claimed, but eventually\r\n" + //
-                                        "The champion stood, the rest saw their better\r\n" + //
-                                        "Mr. Rogers in a bloodstained sweater\r\n" + //
-                                        "This is the ultimate showdown of ultimate destiny\r\n" + //
-                                        "Good guys, bad guys, and explosions as far as the eye can see\r\n" + //
-                                        "And only one will survive, I wonder who it will be\r\n" + //
-                                        "This is the ultimate showdown\r\n" + //
-                                        "(The ultimate showdown)\r\n" + //
-                                        "This is the ultimate showdown\r\n" + //
-                                        "(The ultimate showdown)\r\n" + //
-                                        "This is the ultimate showdown\r\n" + //
-                                        "Of ultimate destiny\n");
-                System.out.println("Also, you should download TempleOS.\n");
-                System.out.println("With that, the messengr takes the completed symbol from the door, tosses it away, shoves you back inside the room, and slams the door shut.");
-                System.out.println("Understandably, you are befuddled, addled, bewildered, muddled, disoriented, baffled, perplexed, confuesd, dazed, mystified, confounded, and one might even say, if they were feeling especially bold and innovative, desperate to invent new ways of wordsmithing, which, upon further reflection, is not actually all that new: utterly clueless about what was just happened, so much so that you don't even get upset at once more being trapped - instead, you just sit on the floor, re-thinking your entire futile existence flippled every which way by this turn of events.");
-                break;
-                }
+            } else if (choice.equals("4")) {
+                investigateDoor();
             }
+        } else {
+            System.out.println("That is not a valid input. Please put in a valid input.");
         }
     }
 
@@ -240,14 +86,173 @@ public class ChooseYourPath {
         }
     }
 
-    public static boolean investigateDoor() {
+    public static void investigateDoor() throws InterruptedException {
         if (!bodySymbol || !bedSymbol || !cabinetSymbol) {
             System.out.println("You investigate the door. It appears to have some kind of odd symbol on it. You can't do anything more with it for now.");
         } else {
             if (bodySymbol && bedSymbol && cabinetSymbol) {
-                return true;
+                songAndDance();
             }
         }
-        return false;
+    }
+
+    public static void songAndDance() throws InterruptedException {
+        System.out.println("\nYou go to the door with trembling fingers. Slowly, you put the pieces of the symbol into the door, and you push it open.\n");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("A heavenly orator ascends from the ground and belts out:\n");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Old Godzilla was hopping around");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Tokyo City like a big playground");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("When suddenly Batman burst from the shade");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And hit Godzilla with a Batgrenade");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Godzilla got [angered] and began to attack");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("But didn't expect to be blocked by Shaq");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Who proceeded to open up a can of Shaq-Fu");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("When Aaron Carter came out of the blue");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And he started beating up Shaquille O'Neal");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Then they both got flattened by the Batmobile");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("But before it could make it back to the Batcave");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Abraham Lincoln popped out of his grave");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And took an AK-47 out from under his hat");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And blew Batman away with a rat-a-tat-tat");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("But he ran out of bullets and he ran away");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Because Optimus Prime came to save the day");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("This is the ultimate showdown of ultimate destiny");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Good guys, bad guys, and explosions as far as the eye can see");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And only one will survive, I wonder who it will be");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("This is the ultimate showdown of ultimate destiny");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Godzilla took a bite out of Optimus Prime");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Like Scruff McGruff took a bite out of crime");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And then Shaq came back covered in a tire track");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("But Jackie Chan jumped out and landed on his back");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And Batman was injured, and trying to get steady");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("When Abraham Lincoln came back with a machete");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("But suddenly something caught his leg and he tripped");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Indiana Jones took him out with his whip");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Then he saw Godzilla sneaking up from behind");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And he reached for his gun which he just couldn't find");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("'Cause Batman stole it and he shot and he missed");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And Jackie Chan deflected it with his fist");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Then he jumped in the air and did a somersault");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("While Abraham Lincoln tried to pole vault");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Onto Optimus Prime, but they collided in the air");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Then they both got hit by a Care Bear stare");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("This is the ultimate showdown of ultimate destiny");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Good guys, bad guys, and explosions as far as the eye can see");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And only one will survive, I wonder who it will be");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("This is the ultimate showdown");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Angels sang out an immaculate chorus");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Down from the heavens descended Chuck Norris");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Who delivered a kick which could shatter bones");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Into the crotch of Indiana Jones");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Who fell over on the ground, writhing in pain");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("As Batman changed back into Bruce Wayne");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("But Chuck saw through his clever disguise");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And he crushed Batman's head in between his thighs");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Then Gandalf the Grey and Gandalf the White");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And Monty Python and the Holy Grail's black knight");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And Benito Mussolini and the Blue Meanie");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And Cowboy Curtis and Jambi the Genie");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Robocop, The Terminator, Captain Kirk, and Darth Vader");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Lo-pan, Superman, every single Power Ranger");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Bill S. Preston and Theodore Logan");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Spock, The Rock, Doc Ock, and Hulk Hogan");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("All came out of nowhere lightning fast");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And they kicked Chuck Norris in his cowboy [behind]");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("It was the bloodiest battle that the world ever saw");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("With civilians looking on in total awe");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("The fight raged on for a century");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Many lives were claimed, but eventually");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("The champion stood, the rest saw their better");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Mr. Rogers in a bloodstained sweater");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("This is the ultimate showdown of ultimate destiny");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Good guys, bad guys, and explosions as far as the eye can see");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("And only one will survive, I wonder who it will be");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("This is the ultimate showdown");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("(The ultimate showdown)");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("This is the ultimate showdown");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("(The ultimate showdown)");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("This is the ultimate showdown");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Of ultimate destiny\n");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Also, you should download TempleOS.\n");
+        System.out.println("With that, the messenger takes the completed symbol from the door, tosses it away, shoves you back inside the room, and slams the door shut.");
+        System.out.println("Understandably, you are befuddled, addled, bewildered, muddled, disoriented, baffled, perplexed, confused, dazed, mystified, confounded, and one might even say, if they were feeling especially bold and innovative, desperate to invent new ways of wordsmithing, which, upon further reflection, is not actually all that new: utterly clueless about what was just happened, so much so that you don't even get upset at once more being trapped - instead, you just sit on the floor, re-thinking your entire futile existence which has been flipped every direction you could possibly think of by this turn of events.");
+
+        System.out.println("\n(Process finished with exit code 0)");
+
+        escaped = true;
     }
 }
