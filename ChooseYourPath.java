@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit; // Used for delays in the heavenly oration
 
 public class ChooseYourPath {
     static Scanner sc = new Scanner(System.in);
@@ -14,7 +14,6 @@ public class ChooseYourPath {
         System.out.println("You wake up in a roughly 10x10x10 feet cubed room. It is dimly lit. You look around.");
          while (true) {
             lookAround();
-
             if (escaped) {
                 break;
             }
@@ -27,11 +26,17 @@ public class ChooseYourPath {
         System.out.flush();
     }
 
+    /**
+     *
+     * @param userInput
+     * @return whether the userInput is a single character and whether that character is an int
+     */
     public static boolean inputLegalityChecker(String userInput) {
         return userInput.length() == 1 && Character.isDigit(userInput.charAt(0));
     }   
 
     // User action methods below
+
     public static void lookAround() throws InterruptedException {
         clearTerminal();
         System.out.println("There is a cabinet in the corner of the room. There is also a bed in the corner. There is a misshapen lump in the corner. A door is set in the wall.");
